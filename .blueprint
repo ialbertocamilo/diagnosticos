@@ -1,0 +1,9 @@
+created:
+    - app/Http/Controllers/PagoController.php
+    - tests/Feature/Http/Controllers/PagoControllerTest.php
+updated:
+    - routes/api.php
+models:
+    Alumno: { nombre: 'string:50', telefono: 'string:50', celular: 'string:50', correo: text, user_id: 'id foreign' }
+    Concepto: { nombre: 'string:50', relationships: { hasMany: Pagos } }
+    Pagos: { ruta_voucher: text, concepto_id: 'id foreign', monto: float, op_fecha: date, op_numero: text, op_banco: text, timestamps: timestamps }
